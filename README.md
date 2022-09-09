@@ -1,16 +1,6 @@
-# splash_screen
+# Login Screen com Splash Screen
 
-A new Flutter project.
+* Tutorial [Curso Flutter Básico [NV1] - 2022](https://www.youtube.com/playlist?list=PLRpTFz5_57cvo0CHf-AnojOvpznz8YO7S) de Deivid Willyan
+* Uso de Splash Screen
+* Uso do Padrão MVC
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
