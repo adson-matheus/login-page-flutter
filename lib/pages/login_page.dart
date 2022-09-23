@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:splash_screen/components/login/login_button.dart';
 import 'package:splash_screen/controllers/login_controller.dart';
+import 'package:splash_screen/widgets/login/text_field_widget.dart';
 
 class LoginPage extends StatelessWidget {
   final LoginController _controller = LoginController();
@@ -30,37 +32,20 @@ class LoginPage extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              TextField(
+              TextFieldWidget(
                 onChanged: _controller.setUsername,
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.person),
-                  hintText: "Usuário",
-                ),
+                label: "Usuário",
+                icon: Icons.person,
               ),
-              TextField(
-                onChanged: _controller.setUsername,
-                obscureText: true,
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.password),
-                  hintStyle: TextStyle(),
-                  hintText: "Senha",
-                ),
+              TextFieldWidget(
+                onChanged: _controller.setPassword,
+                label: "Senha",
+                icon: Icons.password,
               ),
               const SizedBox(
                 height: 50,
               ),
-              ValueListenableBuilder<bool>(
-                valueListenable: _controller.loading,
-                builder: (_, loading, __) {
-                  return loading
-                      ? const CircularProgressIndicator()
-                      : ElevatedButton.icon(
-                          icon: const Icon(Icons.login),
-                          label: const Text("Login"),
-                          onPressed: () => _controller.auth,
-                        );
-                },
-              ),
+              LoginButton(loginController: _controller),
             ],
           ),
         ),
