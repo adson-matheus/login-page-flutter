@@ -5,14 +5,12 @@ class LoginController {
   String? _username;
   String? _password;
 
-  setUsername(value) => value = _username;
-  setPassword(value) => value = _password;
+  setUsername(value) => _username = value;
+  setPassword(value) => _password = value;
 
   Future<bool> auth() async {
     loading.value = true;
-    await Future.delayed(
-      const Duration(seconds: 2),
-    );
+    await Future.delayed(const Duration(seconds: 2));
     loading.value = false;
     return _username == 'admin' && _password == '123';
   }
